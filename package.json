@@ -1,0 +1,12 @@
+{
+  "name": "jobs-ai-processor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "process:ai": "node src/process-jobs-ai.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "openai": "^4.0.0"
+  }
+}
