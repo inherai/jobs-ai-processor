@@ -2,7 +2,7 @@ name: Process Jobs AI
 
 on:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 5,11,17,23 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Install dependencies
         run: npm install
@@ -31,6 +31,3 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          BATCH_SIZE: 10
-          MAX_JOBS_PER_RUN: 100
-          DELAY_MS: 1500
