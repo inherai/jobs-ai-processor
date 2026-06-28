@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
-    "openai": "^4.0.0"
+    "openai": "^6.45.0"
   }
 }
